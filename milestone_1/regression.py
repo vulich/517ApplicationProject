@@ -36,3 +36,7 @@ plt.show()
 #Get best estimator that was trained on entire set
 estimator = model.best_estimator_
 
+#Get the CV error for the best estimator
+error = -model.best_score_
+print("10-Fold Cross Validation Error: " + str(error))
+
