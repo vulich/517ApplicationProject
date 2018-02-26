@@ -1,2 +1,3 @@
 # Milestone 1
-For this milestone I did ridge regression on the red wine dataset. I used the python package scikit-learn to do the regression and matplotlib to create plots. To choose the hyperparameter lambda in the ridge regression, I calculated the mean squared error for various lambda and chose the lambda that minimized this value. This is visualized in [this plot](https://raw.githubusercontent.com/vulich/517ApplicationProject/master/milestone_1/Plots/hyperparameter_selection.png).
+For this milestone I did ridge regression on the red wine dataset. I used the python package scikit-learn to do the regression and matplotlib to create plots. To choose the hyperparameter lambda in the ridge regression, I calculated the 10-fold cross-validation mean squared error for various values of lambda and chose the lambda that minimized the error.
+![this plot](https://raw.githubusercontent.com/vulich/517ApplicationProject/master/milestone_1/Plots/hyperparameter_selection.png).
