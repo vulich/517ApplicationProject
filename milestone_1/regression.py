@@ -2,12 +2,14 @@ import numpy as np
 from sklearn import linear_model
 from sklearn.model_selection import GridSearchCV
 from matplotlib import pyplot as plt
+import pickle
 
 
 #Load data from file
 datafile = open("../dataset/winequality-red.csv")
 datafile.readline()
 data = np.loadtxt(datafile, delimiter=",")
+datafile.close()
 
 #Split data into X and Y
 X = data[:, :11]
@@ -33,8 +35,11 @@ plot.text(a+.02,.4342,r'$\lambda^*=%s$'%(str(a)[:5]))
 plt.savefig('Plots/hyperparameter_selection.png')
 plt.show()
 
-#Get best estimator that was trained on entire set
+#Get best estimator that was trained on entire set and save it to a file
 estimator = model.best_estimator_
+estimatorFile = open('best_estimator','wb')
+pickle.dump(estimator,estimatorFile)
+estimatorFile.close()
 
 #Get the CV error for the best estimator
 error = -model.best_score_
