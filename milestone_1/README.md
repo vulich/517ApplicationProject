@@ -14,7 +14,7 @@ For this milestone I did ridge regression on the red wine dataset. I used the py
 The best lambda was .567. After learning lambda, I used the entire dataset to train an estimator and saved it to a file so that it can be easily used to get predictions of the quality of other wines. This achieved a 10-Fold cross validation mean squared error of 0.434063. Looking at the fitted coefficients suggests that low volatile acidity, low chlorides, and high sulfates are the most important of the measured features in determining a good wine.
 
 ## To run the code
-To run the code in this folder, you need to have python 3.6, scikit-learn, and matplotlib. Download the dataset from [here](https://archive.ics.uci.edu/ml/datasets/wine+quality) and place winequality-red.csv in the dataset folder. Run regression.py to learn a ridge regression estimator from the data and generate the plot above.
+To run the code in this folder, you need to have python 3.6, scikit-learn, numpy, and matplotlib. Download the dataset from [here](https://archive.ics.uci.edu/ml/datasets/wine+quality) and place winequality-red.csv in the dataset folder. Run regression.py to learn a ridge regression estimator from the data and generate the plot above.
 
 #### Citations
 P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. 
