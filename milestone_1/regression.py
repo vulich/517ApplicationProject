@@ -51,7 +51,8 @@ pickle.dump(estimator,estimatorFile)
 estimatorFile.close()
 
 #Print estimator coefficients
-print("w=" + str(estimator.coef_))
+print("w = " + str(estimator.coef_))
+print("b = " + str(estimator.intercept_))
 
 #Get the CV error for the best estimator
 error = -model.best_score_
