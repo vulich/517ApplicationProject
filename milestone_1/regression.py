@@ -50,6 +50,9 @@ estimatorFile = open('best_estimator','wb')
 pickle.dump(estimator,estimatorFile)
 estimatorFile.close()
 
+#Print estimator coefficients
+print("w=" + str(estimator.coef_))
+
 #Get the CV error for the best estimator
 error = -model.best_score_
 print("10-Fold Cross Validation Error: " + str(error))
