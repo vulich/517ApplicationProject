@@ -1,6 +1,6 @@
 # Milestone 1
 ## Dataset
-The dataset used in this project relates the rating of 1,600 Vinho Verde red wines to their chemical properties. Each wine is rated from 0 to ten, using the median rating from at least 3 wine experts. Each wine had its fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulphates, and alcohol measured in a lab. The goal of this milestone is to use a regression model to predict the ratings based on a wine's chemical properties.
+The dataset used in this project relates the rating of 1,600 Vinho Verde red wines to their chemical properties. Each wine is rated from 0 to ten, using the median rating from at least 3 wine experts. Each wine had its fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulphates, and alcohol measured in a lab. The goal of this milestone is to use a regression model to predict the ratings based on a wine's chemical properties. Having a way to predict wine ratings from the chemical properties of wine would be useful because it would allow vineyards to predict how a wine will be rated and give them a more scientific approach to improving their wines by altering their process to create wine with chemical properties predicted to be good.
 ## Statistics
 First, I computed statistics on the wine ratings. I found that most of the wine ratings were clustered around 5-7.
 
