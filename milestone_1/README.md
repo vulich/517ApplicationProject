@@ -2,8 +2,11 @@
 ## Dataset
 The dataset used in this project relates the rating of 1,600 Vinho Verde red wines to their chemical properties. Each wine is rated from 0 to ten, using the median rating from at least 3 wine experts. Each wine had its fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulphates, and alcohol measured in a lab. The goal of this milestone is to use a regression model to predict the ratings based on a wine's chemical properties.
 ## Statistics
-First, I computed statistics on the wine ratings. I found that most of the wine ratings were clustered around 5-7. Mean(Y)=5.6360 Var(Y)=0.6518
+First, I computed statistics on the wine ratings. I found that most of the wine ratings were clustered around 5-7.
+
 ![Histogram of Y](https://raw.githubusercontent.com/vulich/517ApplicationProject/master/milestone_1/Plots/ratings_histogram.png)
+
+Mean(Y)=5.6360 Var(Y)=0.6518
 ## Regression
 For this milestone I did ridge regression on the red wine dataset. I used the python package scikit-learn to do the regression and matplotlib to create plots. To choose the hyperparameter lambda in the ridge regression, I calculated the 10-fold cross-validation mean squared error for various values of lambda and chose the lambda that minimized the error.
 ![this plot](https://raw.githubusercontent.com/vulich/517ApplicationProject/master/milestone_1/Plots/hyperparameter_selection.png)
