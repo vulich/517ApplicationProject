@@ -1,6 +1,6 @@
 # Dataset
 ## Source
-The dataset is from [here](https://archive.ics.uci.edu/ml/datasets/wine+quality). The data used is winequality-red.csv from winequality.zip available for download from the link.
+The dataset is from [here](https://archive.ics.uci.edu/ml/datasets/wine+quality). To run code in this project extract winequality-red.csv to this folder from winequality.zip available for download from the link.
 
 #### Citations
 P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. 
