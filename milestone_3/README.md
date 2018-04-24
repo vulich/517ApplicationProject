@@ -1,6 +1,12 @@
 # Milestone 3
 
-For this milestone I used Principal Component Analysis (PCA) and kernel PCA to reduce the dimensionality of the dataset before fitting it using the transformed data to fit a ridge regression model as in Milestone 1. For Kernel PCA, I used the RBF kernel. I tried using between 1 and all 11 components of the original data and used various kernel widths for the kernel PCA. I used 10-Fold cross validation error to select the best model of those tried. 
+For this milestone I used Principal Component Analysis (PCA) and kernel PCA to reduce the dimensionality of the dataset before fitting it using the transformed data to fit a ridge regression model as in Milestone 1. For Kernel PCA, I used the RBF kernel. Below are plots of the data transformed into two dimensions using both the linear and non-linear PCA.
+![PCA visualization](https://github.com/vulich/517ApplicationProject/blob/master/milestone_3/Plots/PCAviz.png?raw=true)
+
+![KPCA visualization](https://github.com/vulich/517ApplicationProject/blob/master/milestone_3/Plots/KPCAviz.png?raw=true)
+
+
+I tried using between 1 and all 11 components of the original data and used various kernel widths for the kernel PCA. I used 10-Fold cross validation error to select the best model of those tried. 
 
 ![CV error plot](https://raw.githubusercontent.com/vulich/517ApplicationProject/master/milestone_3/Plots/CVerrors.png)
 
