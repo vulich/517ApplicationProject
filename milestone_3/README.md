@@ -13,7 +13,7 @@ I tried using between 1 and all 11 components of the original data and used vari
 As can be seen in the above figure, the ridge regression on the non-transformed data performed the best out of all the models, with kernel PCA performing strictly worse than any of the other methods. This would indicate that all the dimensions of the data are important, and projecting the data into a smaller dimensional space will lead to worse results. It also suggests that the unlabeled data doesn't have any sort of nonlinear structure that can be exploited to make regression easier.
 
 ## To run the code
-To run the code in this folder, you need to have python 3.6, scikit-learn, numpy, and matplotlib. Download the dataset from [here](https://archive.ics.uci.edu/ml/datasets/wine+quality) and place winequality-red.csv in the dataset folder. Run PCA.py to use PCA and kernel PCA to reduce the dimension of the data and learn ridge regression estimators to generate the plot above.
+To run the code in this folder, you need to have python 3.6, scikit-learn, numpy, and matplotlib. Download the dataset from [here](https://archive.ics.uci.edu/ml/datasets/wine+quality) and place winequality-red.csv in the dataset folder. Run PCA.py to use PCA and kernel PCA to reduce the dimension of the data and learn ridge regression estimators to generate the plot above. Run PCAviz.py to generate the visualizations of the data in the 2-dimensional space.
 
 #### Citations
 P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. 
