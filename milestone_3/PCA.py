@@ -83,9 +83,10 @@ for dim in range(1,12):
     err3.append(KPCAerrors.mean())
     
 plt.figure()
-plt.plot(err1)
-plt.plot(err2)
-plt.plot(err3)
+x = np.linspace(1,11,11)
+plt.plot(x,err1)
+plt.plot(x,err2)
+plt.plot(x,err3)
 plt.legend(["No Dim. Reduction", "PCA", "Kernel PCA"])
 plt.xlabel("Components in Dimensionality Reduction")
 plt.ylabel("10-Fold CV Error")
