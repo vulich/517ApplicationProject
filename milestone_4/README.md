@@ -1,0 +1,16 @@
+# Milestone 4
+For this milestone I compared the performance of all methods used so far in the project. I compared ridge regression and a gaussian process regressor on both the untransformed data and the data transformed with principle component analysis (PCA). To compare the results, I used 10 reruns of 10-Fold cross-validation with mean squared error as the error measure. Each model was run on the same splits. For the Gaussian process, I used the Matern kernel with 𝜈=0.5, since that is what performed the best in Milestone 2. In Milestone 3, PCA didn't improve the prediction of ridge regression no matter how many components were chosen, so the best number of components was the same as the dimensionality of the data. However, for the final comparison, I chose to use six components because ridge regression performed fairly well with this number of components while reducing the dimensionality a good amount. This made for a more interesting comparison since the entire point of Milestone 3 was to do dimensionality reduction. Here are the final comparison's resulting mean square errors.
+
+|                     | Ridge Regression | Gaussian Process |
+|---------------------|:----------------:|:----------------:|
+|No Transformation    |0.42527491        |0.4682414         |
+|PCA with 6 components|0.43966812        |0.46968217        |
+
+To test whether the model differences were significant, I used R to do a repeated measures two-way ANOVA. At the α=.01 level, the choice of model, the PCA transformation, and the interaction between the two was significant. I then used Tukey's HSD test to test the individual differences. At the α=.01 level, ridge regression on the non-transformed data performed significantly better than all other models. Since the simpler model was the best, this suggests that the gaussian process overfit the data. The fact that the PCA transformation performed consistently worse indicates that all components of the original data are important for making a good prediction.
+
+## To run the code
+To run the code in this folder, you need to have python 3.6, scikit-learn, numpy, and matplotlib as well as R with the lme4, nlme, and multcomp libraries installed. Download the dataset from [here](https://archive.ics.uci.edu/ml/datasets/wine+quality) and place winequality-red.csv in the dataset folder. Run compare.py to compare all the methods with 10 reruns of 10-fold cross-validation. This will take a while. comparison.py will create a runtime warning. It doesn't cause any issues and as far as I can tell, it comes from an issue inside of scikit-learn, so I can't really fix it. comparison.py will print the means of the errors and save the errors in pickled format in CVerrors and in plaintext in errors.txt. To run the statistical tests, run comparison_test.r in R with errors.txt in the working directory.
+
+#### Citations
+P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. 
+Modeling wine preferences by data mining from physicochemical properties. In Decision Support Systems, Elsevier, 47(4):547-553, 2009.
